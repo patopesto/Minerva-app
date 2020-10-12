@@ -1,28 +1,28 @@
-This is the repository for the Minerva API hacky project.
-Maintainer: ALM (bambinito.dev@gmail.com)
-
-Based on the original crappy python script ran with cron.
-Later added a REST API using Falcon to manage tasks + scheduler with APScheduler.
-Then refactored everything to make configurable and deployable app.
-Then Dockerized the app.
-
-Instructions:
+This is the repository for the Minerva API hacky project.  
+Maintainer: ALM (bambinito.dev@gmail.com)  
+  
+Based on the original crappy python script ran with cron.  
+Later added a REST API using Falcon to manage tasks + scheduler with APScheduler.  
+Then refactored everything to make configurable and deployable app.  
+Then Dockerized the app.  
+  
+Instructions:  
 
 - To run Locally:
-Clone the repo.
+Clone the repo.  
 Install MongoDB and have it running on `http://localhost:27017` (default port) then,
 ```shell
 python3 -m venv venv
 pip install -r requirements.txt
 ```
-
-To run app:
+  
+To run app:  
 ```shell
 python run.py
 ```
-(use --help to see all configuration arguments)
-API should be available on `http://localhost:5000/`
-
+(use --help to see all configuration arguments)  
+API should be available on `http://localhost:5000/`  
+  
 - To create new Task:
 POST request at `http://localhost:5000/tasks` with a body of the form:
 ```json
@@ -36,11 +36,11 @@ POST request at `http://localhost:5000/tasks` with a body of the form:
 	"email": "bambinito.dev@gmail.com"
 }
 ```
-
-
-
-- To run Dev: (app running in local Docker container)
-Pull and run mongo as a Docker container
+  
+  
+  
+- To run Dev: (app running in local Docker container)  
+Pull and run mongo as a Docker container  
 ```shell
 docker pull mongo
 docker run --detach --name mongodb mongo:latest
