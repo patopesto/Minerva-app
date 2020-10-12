@@ -1,0 +1,4 @@
+env_name = "LOCAL"
+bind = "127.0.0.1:5000"
+
+mongo_uri = "mongodb://localhost:27017/"

@@ -1,0 +1,4 @@
+env_name = "DEV"
+bind = "0.0.0.0:5000"
+
+mongo_uri = "mongodb://mongodb:27017/"
