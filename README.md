@@ -23,7 +23,7 @@ python run.py
 (use --help to see all configuration arguments)  
 API should be available on `http://localhost:5000/`  
   
-To create new Task:
+To create new Task:  
 POST request at `http://localhost:5000/tasks` with a body of the form:
 ```json
 {
@@ -39,7 +39,8 @@ POST request at `http://localhost:5000/tasks` with a body of the form:
   
   
   
-To run Dev: (app running in local Docker container)  
+To run Dev:  
+(app running in local Docker container)  
 - Pull and run mongo as a Docker container  
 ```shell
 docker pull mongo
