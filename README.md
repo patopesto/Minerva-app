@@ -8,7 +8,7 @@ Then Dockerized the app.
   
 Instructions:  
 
-- To run Locally:
+- To run Locally:  
 Clone the repo.  
 Install MongoDB and have it running on `http://localhost:27017` (default port) then,
 ```shell
