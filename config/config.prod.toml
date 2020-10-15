@@ -1,0 +1,4 @@
+env_name = "PROD"
+bind = "0.0.0.0:5000"
+
+mongo_uri = "mongodb://mongo-0.mongo:27017/"
