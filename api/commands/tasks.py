@@ -45,7 +45,7 @@ class Tasks(object):
 		deleted_jobs = self.scheduler.delete_tasks()
 
 		resp.status = falcon.HTTP_200
-		data = {'status': r.acknowledged, 'deleted_documents': r.deleted_count, 'deleted_jobs': delete_tasks}
+		data = {'status': r.acknowledged, 'deleted_documents': r.deleted_count, 'deleted_jobs': deleted_jobs}
 		resp.media = data
 
 

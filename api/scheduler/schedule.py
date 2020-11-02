@@ -59,7 +59,7 @@ def task(body):
 	spaces = minerva_task(course)
 	spaces += 1
 	if spaces > 0:
-		course_text = "{}-{}".format(course['dept'],course['dept'])
+		course_text = "{}-{}".format(course['dept'],course['crn'])
 		notify(course_text, course['crn'], spaces, body['email'])
 
 
