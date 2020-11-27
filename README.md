@@ -1,4 +1,5 @@
-This is the repository for the Minerva API hacky project.  
+# Minerva App
+This is the repository for the backend of the [Minerva App](https://app.minerva.bambinito.co) hacky project.  
 Maintainer: ALM (bambinito.dev@gmail.com)  
 
 The purpose of this api is to schedule tasks that will check available spaces at regular intervals for a McGill course.   
@@ -8,8 +9,8 @@ This app significantly increases your chance of getting a space in the course yo
 You can try it out at: https://app.minerva.bambinito.co   
 The api used by the app is available at https://api.minerva.bambinito.co   
  
-!!! This repository is depreciated and has been moved to Gitlab: https://gitlab.com/patopest/api !!!   
--> The repository for the web frontend can also be found on Gitlab: https://gitlab.com/patopest/web   
+!!! This repository is depreciated and has been moved to [Gitlab](https://gitlab.com/patopest/api) !!!   
+-> The repository for the web frontend can also be found on [Gitlab](https://gitlab.com/patopest/web)   
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 Based on the original crappy python script ran with cron.  
@@ -18,12 +19,12 @@ Then refactored everything to make configurable and deployable app.
 Then Dockerized the app.   
 Then refactored everything a coupld extra times....   
 
-"Inspired" (a lot) by alexferl's Falcon-Boilerplate (https://github.com/alexferl/falcon-boilerplate)  
+"Inspired" (a lot) by alexferl's [falcon-boilerplate](https://github.com/alexferl/falcon-boilerplate)  
   
 
-Instructions:  
+## Instructions:  
 
-To run Locally:  
+### To run Locally:  
 - Clone the repo.  
 - Install MongoDB (using brew) and have it running on `localhost:27017` (default port) then,
 ```shell
@@ -43,7 +44,7 @@ python run.py
 (use --help to see all configuration arguments)  
 API should be available on `http://localhost:5000/`  
   
-Usage: 
+### Usage: 
 - Create new user at POST `http://localhost:5000/register` with body: 
 ```json
 {
@@ -69,7 +70,7 @@ To create new Task:
   
   
   
-To run Dev:  
+### To run Dev:  
 (app running in local Docker container)  
 - Pull and run mongo as a Docker container  
 ```shell
