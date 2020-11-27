@@ -1,19 +1,39 @@
 This is the repository for the Minerva API hacky project.  
-Maintainer: ALM (bambinito.dev@gmail.com)  
-  
+Maintainer: ALM (bambinito.dev@gmail.com)
+
+The purpose of this api is to schedule tasks that will check available spaces at regular intervals for a McGill course.
+If a space is found, it will send you an email notification.
+This app significantly increases your chance of getting a space in the course you want...
+
+You can try it out at: https://app.minerva.bambinito.co
+The api used by the app is available at https://api.minerva.bambinito.co
+
+!!! This repository is depreciated and has been moved to Gitlab: https://gitlab.com/patopest/api !!!
+-> The repository for the web frontend can also be found on Gitlab: https://gitlab.com/patopest/web
+
+----------------------------------------------------------------------------------------------------------------------------------------
 Based on the original crappy python script ran with cron.  
 Later added a REST API using Falcon to manage tasks + scheduler with APScheduler.  
 Then refactored everything to make configurable and deployable app.  
-Then Dockerized the app.  
+Then Dockerized the app.
+Then refactored everything a coupld extra times....
+
+"Inspired" (a lot) by alexferl's Falcon-Boilerplate (https://github.com/alexferl/falcon-boilerplate)
   
+
 Instructions:  
 
 To run Locally:  
 - Clone the repo.  
-- Install MongoDB and have it running on `http://localhost:27017` (default port) then,
+- Install MongoDB (using brew) and have it running on `localhost:27017` (default port) then,
 ```shell
-python3 -m venv venv
+virtualenv -p python3 venv
+source venv/bin/activate
 pip install -r requirements.txt
+```
+- In case you get a python thread crash:
+```shell
+echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> venv/bin/activate
 ```
   
 - To run app:  
@@ -23,17 +43,27 @@ python run.py
 (use --help to see all configuration arguments)  
 API should be available on `http://localhost:5000/`  
   
-To create new Task:  
-POST request at `http://localhost:5000/tasks` with a body of the form:
+Usage: 
+- Create new user at POST `http://localhost:5000/register` with body:
+```json
+{
+	"email": "your.email@whatever.com",
+	"password": "your_password"
+}
+```
+- Use provided token in the `Authorization` header.
+
+To create new Task:
+- POST request at `http://localhost:5000/users/{{ user_id }}/tasks` with a body of the form:
 ```json
 {
 	"course": {
-		"dept": "ECSE",
-		"code": "308",
-		"crn": "15974",
-		"term": "Winter2021"
+		"dept": "COMP",
+		"code": "101",
+		"crn": "12345",
+		"term": "Winter2056"
 	},
-	"email": "bambinito.dev@gmail.com"
+	"email": "your.email@whatever.com"
 }
 ```
   
@@ -48,9 +78,9 @@ docker run --detach --name mongodb mongo:latest
 ```
 
 - Pull Docker image:
-(https://hub.docker.com/repository/docker/n8zjgu6r9/api/general)
+(https://gitlab.com/patopest/api/container_registry)
 ```shell
-docker pull n8zjgu6r9/api:1.0
+docker pull registry.gitlab.com/patopest/api
 ```
 
 - OR build Docker image:
