@@ -17,7 +17,7 @@ Based on the original crappy python script ran with cron.
 Later added a REST API using Falcon to manage tasks + scheduler with APScheduler.  
 Then refactored everything to make configurable and deployable app.  
 Then Dockerized the app.   
-Then refactored everything a coupld extra times....   
+Then refactored everything a couple extra times....   
 
 "Inspired" (a lot) by alexferl's [falcon-boilerplate](https://github.com/alexferl/falcon-boilerplate)  
   
