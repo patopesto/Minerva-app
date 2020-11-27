@@ -1,24 +1,24 @@
 This is the repository for the Minerva API hacky project.  
-Maintainer: ALM (bambinito.dev@gmail.com)
+Maintainer: ALM (bambinito.dev@gmail.com)  
 
-The purpose of this api is to schedule tasks that will check available spaces at regular intervals for a McGill course. 
-If a space is found, it will send you an email notification. 
-This app significantly increases your chance of getting a space in the course you want... 
+The purpose of this api is to schedule tasks that will check available spaces at regular intervals for a McGill course.   
+If a space is found, it will send you an email notification.   
+This app significantly increases your chance of getting a space in the course you want...   
 
-You can try it out at: https://app.minerva.bambinito.co 
-The api used by the app is available at https://api.minerva.bambinito.co 
+You can try it out at: https://app.minerva.bambinito.co   
+The api used by the app is available at https://api.minerva.bambinito.co   
  
-!!! This repository is depreciated and has been moved to Gitlab: https://gitlab.com/patopest/api !!! 
--> The repository for the web frontend can also be found on Gitlab: https://gitlab.com/patopest/web 
+!!! This repository is depreciated and has been moved to Gitlab: https://gitlab.com/patopest/api !!!   
+-> The repository for the web frontend can also be found on Gitlab: https://gitlab.com/patopest/web   
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 Based on the original crappy python script ran with cron.  
 Later added a REST API using Falcon to manage tasks + scheduler with APScheduler.  
 Then refactored everything to make configurable and deployable app.  
-Then Dockerized the app. 
-Then refactored everything a coupld extra times.... 
+Then Dockerized the app.   
+Then refactored everything a coupld extra times....   
 
-"Inspired" (a lot) by alexferl's Falcon-Boilerplate (https://github.com/alexferl/falcon-boilerplate) 
+"Inspired" (a lot) by alexferl's Falcon-Boilerplate (https://github.com/alexferl/falcon-boilerplate)  
   
 
 Instructions:  
